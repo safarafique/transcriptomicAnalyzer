@@ -1,0 +1,99 @@
+Complete Instructions for Uploading and Running Your Streamlit App on GitHub
+Step 1: Download Your Files Locally
+Download these files from this chat:
+
+app.py (your app source code)
+
+requirements.txt (list of Python packages)
+
+Save them in a folder on your computer.
+
+Step 2: Create a GitHub Repository
+Log in to your GitHub account (create one if you don’t have it).
+
+Click the + icon at the top right and select New repository.
+
+Enter a repository name (e.g., geo-microarray-app).
+
+Optionally add a description.
+
+Set repository visibility: Public or Private.
+
+Check Add a README file (optional).
+
+Click Create repository.
+
+Step 3: Upload Files to GitHub
+Option A: Upload via GitHub Website
+Go into your newly created repo on GitHub.
+
+Click Add file > Upload files.
+
+Drag and drop your app.py and requirements.txt files.
+
+Scroll down and click Commit changes.
+
+Option B: Using Git Command Line
+If you have Git installed on your machine and prefer the terminal:
+
+Open your terminal/command prompt.
+
+Change directory (cd) to the folder where your files are.
+
+Initialize git (if this folder is not a git repo yet):
+
+bash
+git init
+Add the GitHub repository as a remote:
+
+bash
+git remote add origin https://github.com/yourusername/yourrepo.git
+Replace yourusername and yourrepo with your GitHub username and repository name.
+
+Add files to git:
+
+bash
+git add app.py requirements.txt
+Commit files:
+
+bash
+git commit -m "Add Streamlit GEO microarray app"
+Push files to GitHub remote:
+
+bash
+git push -u origin main
+Step 4: Install Python Dependencies Locally (Optional)
+On your local machine, set up the environment to run the app:
+
+Optionally create and activate a virtual environment:
+
+bash
+python3 -m venv venv
+source venv/bin/activate  # (Linux/macOS)
+venv\Scripts\activate     # (Windows)
+Install packages:
+
+bash
+pip install -r requirements.txt
+Step 5: Run the Streamlit App Locally
+Run the app in your terminal from the folder with app.py:
+
+bash
+streamlit run app.py
+It will launch a local web server and open the app in your browser.
+
+Step 6: Deploy on Streamlit Cloud (Optional)
+Connect your GitHub repository to Streamlit Cloud (streamlit.io/cloud).
+
+Authorize GitHub access.
+
+Select your repository and branch.
+
+Streamlit Cloud will install dependencies from requirements.txt and deploy your app automatically.
+
+Additional Notes
+The requirements.txt ensures package consistency.
+
+Make sure the GEO accessions you test with are valid and public datasets.
+
+If you want, add a README on GitHub with these same instructions for others.
